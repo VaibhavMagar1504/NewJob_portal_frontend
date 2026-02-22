@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+.Services-section {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #ffffffbd; /* changed to white */
+}
+
+.Services-section h2 {
+    font-family: "Open Sans", sans-serif;
+    margin: 20px 0;
+    font-size: 2.2rem;
+    font-weight:900;
+    padding: 20px;
+    color: #000000; /* dark text for white background */
+    animation: service linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.Services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: service linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.service-box {
+    background-color: #f9f9f9c9; /* slightly off-white for contrast */
+    box-shadow: 0 0 10px black;
+    border-radius: 12px;
+    flex: 1 1 22%;   
+    max-width: 22%;
+    min-width: 220px;
+    padding: 25px 20px;
+    color: #222; /* text dark for white background */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.service-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 1rem;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+@keyframes service {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .service-box {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .Services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .service-box {
+        flex: 1 1 48%; /* 2 boxes per row on mobile */
+        max-width: 48%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .service-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-box p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-box {
+        flex: 1 1 100%; /* fallback single box on very small screens */
+        max-width: 100%;
+    }
+}

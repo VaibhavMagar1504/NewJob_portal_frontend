@@ -1,0 +1,100 @@
+/* ====== Auth Page Wrapper ====== */
+.hrauth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically */
+  background: linear-gradient(135deg, #f0f4ff, #e6edff); /* soft blue gradient */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ====== Auth Card ====== */
+.hrauth-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ====== Title ====== */
+.hrauth-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a237e; /* dark professional blue */
+  margin-bottom: 24px;
+}
+
+/* ====== Form Groups ====== */
+.hrauth-group {
+  margin-bottom: 18px;
+}
+
+.hrauth-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.hrauth-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.hrauth-group input:focus {
+  border-color: #3949ab;
+  box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.2);
+  outline: none;
+}
+
+/* ====== Error Message ====== */
+.hrauth-error {
+  color: #d32f2f;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ====== Button ====== */
+.hrauth-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3949ab;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.hrauth-btn:hover {
+  background: #303f9f;
+}
+
+.hrauth-btn:active {
+  transform: scale(0.98);
+}
+
+/* ====== Fade-In Animation ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

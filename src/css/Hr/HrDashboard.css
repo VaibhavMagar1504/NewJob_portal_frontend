@@ -1,0 +1,74 @@
+.hr-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 80px; /* collapsed sidebar */
+  margin-top: 70px; /* navbar height */
+  overflow-y: auto;
+  height: calc(100vh - 70px);
+  background: #f5f6fa;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 80px);
+}
+
+/* Expanded Sidebar */
+.hr-sidebar.open ~ .main-content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+/* Hover effect for collapsed sidebar */
+.hr-sidebar.closed:hover ~ .main-content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    margin-top: 56px; /* mobile navbar height */
+    height: calc(100vh - 56px);
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .dashboard-content {
+    padding: 8px !important;
+    margin: 0;
+  }
+  
+  /* Ensure no horizontal scroll on mobile */
+  .container {
+    max-width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+  
+  .dashboard-content {
+    padding: 15px !important;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .main-content {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+}
+  

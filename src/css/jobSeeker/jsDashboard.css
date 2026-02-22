@@ -1,0 +1,32 @@
+/* JobSeeker Dashboard - No Sidebar Layout */
+.js-dashboard {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.js-main-content {
+  padding-top: 70px; /* Account for fixed navbar height */
+}
+
+.js-dashboard-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .js-main-content {
+    padding-top: 60px;
+  }
+  
+  .js-dashboard-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .js-dashboard-content {
+    padding: 0.5rem;
+  }
+}

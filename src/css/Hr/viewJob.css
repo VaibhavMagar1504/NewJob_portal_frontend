@@ -1,0 +1,411 @@
+/* View Job Styles */
+.container {
+  padding: 20px;
+}
+
+/* Header Section */
+.text-center.mb-4 h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.text-center.mb-4 p {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+/* Search Box */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group-text {
+  border: none;
+  font-size: 1.1rem;
+}
+
+.form-control {
+  border: 1px solid #dee2e6;
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  padding: 12px 15px;
+}
+
+.form-control:focus {
+  border-color: #4A5859;
+  box-shadow: 0 0 0 0.2rem rgba(74, 88, 89, 0.25);
+}
+
+/* Table Styles */
+.table-responsive {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table {
+  margin-bottom: 0;
+}
+
+.custom-table thead th {
+  background: linear-gradient(135deg, #1B2E34, #4A5859);
+  color: white;
+  border: none;
+  padding: 15px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.custom-table thead th:first-child {
+  text-align: center;
+}
+
+.custom-table tbody td {
+  padding: 12px;
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.9rem;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  border: none;
+}
+
+.btn-info:hover {
+  background: linear-gradient(135deg, #138496, #117a8b);
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+}
+
+.page-link {
+  border: none;
+  color: #0d6efd;
+  padding: 10px 15px;
+  margin: 0 2px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+  color: #0d6efd;
+  transform: translateY(-1px);
+}
+
+.page-item.active .page-link {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  border: none;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: transparent;
+}
+
+/* Modal Styles */
+.modal-header {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: white;
+  border-bottom: none;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 20px 25px;
+}
+
+/* Responsive Design - Mobile First Approach */
+
+/* Extra Small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .text-center.mb-4 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .text-center.mb-4 p {
+    font-size: 1rem;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .custom-table thead th {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .custom-table tbody td {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+  
+  .pagination {
+    margin-top: 15px;
+  }
+  
+  .page-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer {
+    padding: 15px 20px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    padding: 18px;
+  }
+  
+  .text-center.mb-4 h2 {
+    font-size: 1.7rem;
+  }
+  
+  .custom-table thead th {
+    padding: 13px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .custom-table tbody td {
+    padding: 11px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .btn {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .text-center.mb-4 h2 {
+    font-size: 1.8rem;
+  }
+  
+  .custom-table thead th {
+    padding: 14px 11px;
+    font-size: 0.9rem;
+  }
+  
+  .custom-table tbody td {
+    padding: 12px 11px;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .text-center.mb-4 h2 {
+    font-size: 1.9rem;
+  }
+  
+  .custom-table thead th {
+    padding: 15px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .custom-table tbody td {
+    padding: 12px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .text-center.mb-4 h2 {
+    font-size: 2.2rem;
+  }
+  
+  .custom-table thead th {
+    padding: 16px 12px;
+    font-size: 1rem;
+  }
+  
+  .custom-table tbody td {
+    padding: 13px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    padding: 9px 17px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Table Responsiveness for Small Screens */
+@media (max-width: 767.98px) {
+  .table-responsive {
+    border-radius: 8px;
+  }
+  
+  /* Stack table cells on very small screens */
+  .custom-table thead,
+  .custom-table tbody,
+  .custom-table tr,
+  .custom-table th,
+  .custom-table td {
+    display: block;
+  }
+  
+  .custom-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .custom-table tr {
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-table td {
+    border: none;
+    position: relative;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .custom-table td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #0d6efd;
+    margin-right: 10px;
+    min-width: 80px;
+    display: inline-block;
+  }
+  
+  .custom-table td:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Loading State */
+.text-center.text-muted {
+  font-size: 1.1rem;
+  padding: 40px 20px;
+}
+
+/* No Jobs Found State */
+.text-dark.text-center {
+  font-size: 1.1rem;
+  padding: 40px 20px;
+}
+
+.text-dark.text-center i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Focus and Accessibility */
+.btn:focus,
+.form-control:focus,
+.page-link:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .btn,
+  .pagination,
+  .input-group {
+    display: none !important;
+  }
+  
+  .table-responsive {
+    box-shadow: none;
+    border: 1px solid #dee2e6;
+  }
+  
+  .custom-table thead th {
+    background: #f8f9fa !important;
+    color: #000 !important;
+  }
+}
