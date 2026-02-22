@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../css/Hr/dashboard.css";
-import { getDashboardStats, getRecentActivities } from "../../services/adminService";
+// import { getDashboardStats, getRecentActivities } from "../../services/adminService";
 
 export default function DashboardAdmin() {
   const [metrics, setMetrics] = useState([]);
@@ -9,65 +9,117 @@ export default function DashboardAdmin() {
   const [recentActivities, setRecentActivities] = useState([]);
   const [loadingActivities, setLoadingActivities] = useState(true);
 
-  const adminData =
-    JSON.parse(localStorage.getItem("adminData")) || { admin_name: "Admin" };
+  const adminData = JSON.parse(localStorage.getItem("adminData")) || {
+    admin_name: "Admin",
+  };
   const rawName = adminData.admin_name;
-  const name =
-    rawName.charAt(0).toUpperCase() + rawName.slice(1).toLowerCase();
+  const name = rawName.charAt(0).toUpperCase() + rawName.slice(1).toLowerCase();
+
+  // useEffect(() => {
+  //   const fetchStats = async () => {
+  //     try {
+  //       const res = await getDashboardStats();
+  //       if (res.success) {
+  //         const data = res.data;
+  //         setMetrics([
+  //           {
+  //             title: "Total Job Seekers",
+  //             count: data.totalJobSeekers,
+  //             icon: "bi-people-fill",
+  //             color: "primary",
+  //           },
+  //           {
+  //             title: "Total HRs",
+  //             count: data.totalHRs,
+  //             icon: "bi-person-badge-fill",
+  //             color: "info",
+  //           },
+  //           {
+  //             title: "Total Jobs Posted",
+  //             count: data.totalJobs,
+  //             icon: "bi-briefcase-fill",
+  //             color: "success",
+  //           },
+  //           {
+  //             title: "Pending Approvals",
+  //             count: data.pendingApprovals,
+  //             icon: "bi-exclamation-circle-fill",
+  //             color: "warning",
+  //           },
+  //         ]);
+  //       }
+  //     } catch (err) {
+  //       console.error("Error fetching dashboard stats:", err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   const fetchActivities = async () => {
+  //     try {
+  //       const data = await getRecentActivities();
+  //       setRecentActivities(data.success ? data.activities : []);
+  //     } catch (err) {
+  //       console.error("Error fetching recent activities:", err);
+  //     } finally {
+  //       setLoadingActivities(false);
+  //     }
+  //   };
+
+  //   fetchStats();
+  //   fetchActivities();
+  // }, []);
 
   useEffect(() => {
-    const fetchStats = async () => {
-      try {
-        const res = await getDashboardStats();
-        if (res.success) {
-          const data = res.data;
-          setMetrics([
-            {
-              title: "Total Job Seekers",
-              count: data.totalJobSeekers,
-              icon: "bi-people-fill",
-              color: "primary",
-            },
-            {
-              title: "Total HRs",
-              count: data.totalHRs,
-              icon: "bi-person-badge-fill",
-              color: "info",
-            },
-            {
-              title: "Total Jobs Posted",
-              count: data.totalJobs,
-              icon: "bi-briefcase-fill",
-              color: "success",
-            },
-            {
-              title: "Pending Approvals",
-              count: data.pendingApprovals,
-              icon: "bi-exclamation-circle-fill",
-              color: "warning",
-            },
-          ]);
-        }
-      } catch (err) {
-        console.error("Error fetching dashboard stats:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
+    // Dummy dashboard metrics
+    setMetrics([
+      {
+        title: "Total Job Seekers",
+        count: 120,
+        icon: "bi-people-fill",
+        color: "primary",
+      },
+      {
+        title: "Total HRs",
+        count: 25,
+        icon: "bi-person-badge-fill",
+        color: "info",
+      },
+      {
+        title: "Total Jobs Posted",
+        count: 80,
+        icon: "bi-briefcase-fill",
+        color: "success",
+      },
+      {
+        title: "Pending Approvals",
+        count: 12,
+        icon: "bi-exclamation-circle-fill",
+        color: "warning",
+      },
+    ]);
 
-    const fetchActivities = async () => {
-      try {
-        const data = await getRecentActivities();
-        setRecentActivities(data.success ? data.activities : []);
-      } catch (err) {
-        console.error("Error fetching recent activities:", err);
-      } finally {
-        setLoadingActivities(false);
-      }
-    };
+    // Dummy recent activities
+    setRecentActivities([
+      {
+        id: 1,
+        message: "New HR registered",
+        createdAt: new Date(),
+      },
+      {
+        id: 2,
+        message: "Job posted by HR",
+        createdAt: new Date(),
+      },
+      {
+        id: 3,
+        message: "Job seeker applied for Developer role",
+        createdAt: new Date(),
+      },
+    ]);
 
-    fetchStats();
-    fetchActivities();
+    setLoading(false);
+    setLoadingActivities(false);
   }, []);
 
   return (
