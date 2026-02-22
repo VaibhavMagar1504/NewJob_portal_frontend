@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../css/Hr/addJob.css";
-import { addJobPost } from "../../Services/HRService";
+import { addJobPost } from "../../services/HRService";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { jwtDecode } from "jwt-decode";
 import { validateJobData } from "../../validation/AddjobValidation";

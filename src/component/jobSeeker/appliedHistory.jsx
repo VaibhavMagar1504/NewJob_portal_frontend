@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getSeekerApplications } from "../../Services/SeekerService";
+import { getSeekerApplications } from "../../services/SeekerService";
 import { jwtDecode } from "jwt-decode";
 import "../../css/jobSeeker/AppliedHistory.css"; // custom css file
 

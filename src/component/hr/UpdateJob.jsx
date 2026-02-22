@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { updateJob } from "../../Services/HRService";
+import { updateJob } from "../../services/HRService";
 import axios from "axios";
 import "../../css/Hr/addJob.css";
 

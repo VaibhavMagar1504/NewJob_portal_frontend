@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { viewSeeker } from "../../Services/adminService";
+import { viewSeeker } from "../../services/adminService";
 
 export default function ViewSeeker() {
   const [seekerList, setSeekerList] = useState([]);

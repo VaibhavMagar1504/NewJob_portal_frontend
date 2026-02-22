@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../css/Hr/HRAuth.css";
-import { adminLogin } from "../../Services/adminService";
+import { adminLogin } from "../../services/adminService";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState(""); //  Changed from email to username

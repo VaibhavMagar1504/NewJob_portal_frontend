@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getJobsByHR, deleteJob } from "../../Services/HRService";
+import { getJobsByHR, deleteJob } from "../../services/HRService";
 import { Button, Modal, Badge } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../css/Hr/viewJob.css";

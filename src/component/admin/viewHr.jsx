@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import axios from "axios";
-import { viewHr, API_URL } from "../../Services/adminService";
+import { viewHr, API_URL } from "../../services/adminService";
 
 export default function ViewHR() {
   const [hrList, setHrList] = useState([]);

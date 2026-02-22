@@ -1,5 +1,5 @@
 ﻿import React, { useState } from "react";
-import { registerSeeker } from "../../Services/SeekerService";
+import { registerSeeker } from "../../services/SeekerService";
 import { validateSeekerData } from "../../validation/SeekerRegistaion";
 
 

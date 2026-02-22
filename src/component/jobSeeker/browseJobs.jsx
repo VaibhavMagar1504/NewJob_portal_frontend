@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAllJobs } from "../../Services/SeekerService";
+import { getAllJobs } from "../../services/SeekerService";
 import "../../css/jobSeeker/browseJobs.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import dayjs from "dayjs";

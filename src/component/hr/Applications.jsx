@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getApplicationsByHR } from "../../Services/HRService";
+import { getApplicationsByHR } from "../../services/HRService";
 import { Button } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { jwtDecode } from "jwt-decode";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HRRegister from "./HRRegister";
-import { hrLogin } from "../../Services/HRService";
+import { hrLogin } from "../../services/HRService";
 import "../../css/Hr/HRAuth.css";
 
 export default function HRAuth() {

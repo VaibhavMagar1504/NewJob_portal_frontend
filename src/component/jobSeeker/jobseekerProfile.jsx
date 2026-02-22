@@ -11,7 +11,7 @@ import {
   saveEducation,
   saveSkills,
   saveExperience
-} from "../../Services/SeekerService";
+} from "../../services/SeekerService";
 
 export default function SeekerProfile() {
   const [profile, setProfile] = useState(null);

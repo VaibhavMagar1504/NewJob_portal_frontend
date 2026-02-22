@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { applyForJob, getAllJobs, getSeekerApplications } from "../../Services/SeekerService";
+import { applyForJob, getAllJobs, getSeekerApplications } from "../../services/SeekerService";
 import { jwtDecode } from "jwt-decode";
 import "../../css/jobSeeker/jobDetails.css";
 

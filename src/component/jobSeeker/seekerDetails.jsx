@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { deleteSeeker, updateSeeker } from "../../Services/SeekerService";
+import { deleteSeeker, updateSeeker } from "../../services/SeekerService";
 import "../../css/jobSeeker/seekerDetail.css";
 
 const SeekerDetail = () => {

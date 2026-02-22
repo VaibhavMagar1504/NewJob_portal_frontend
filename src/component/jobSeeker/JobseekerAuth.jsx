@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../css/Hr/HRAuth.css";
 import { useNavigate } from "react-router-dom";
 import SeekerRegister from "./SeekerRegister";
-import { loginJobSeeker } from "../../Services/SeekerService";
+import { loginJobSeeker } from "../../services/SeekerService";
 import { jwtDecode } from "jwt-decode";
 
 export default function JobSeekerAuth() {
