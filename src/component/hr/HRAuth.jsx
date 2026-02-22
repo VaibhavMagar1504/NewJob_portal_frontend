@@ -1,30 +1,54 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HRRegister from "./HRRegister";
-import { hrLogin } from "../../services/HRService";
+// import { hrLogin } from "../../services/HRService";
 import "../../css/Hr/HRAuth.css";
 
 export default function HRAuth() {
   const [activeForm, setActiveForm] = useState("login");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   const email = e.target.email.value;
+  //   const password = e.target.password.value;
 
-    try {
-      const res = await hrLogin(email, password); // { success, msg, token, user }
-      if (!res?.success) throw new Error(res?.msg || "Login failed");
-      localStorage.setItem("hr_token", res.token);
-     // localStorage.setItem("hr_user", JSON.stringify(res.user));
+  //   try {
+  //     const res = await hrLogin(email, password); // { success, msg, token, user }
+  //     if (!res?.success) throw new Error(res?.msg || "Login failed");
+  //     localStorage.setItem("hr_token", res.token);
+  //    // localStorage.setItem("hr_user", JSON.stringify(res.user));
 
      
-      navigate("/hr");
-    } catch (err) {
-      alert(err.message || "Something went wrong ");
-    }
-  };
+  //     navigate("/hr");
+  //   } catch (err) {
+  //     alert(err.message || "Something went wrong ");
+  //   }
+  // };
+
+
+
+  const handleLogin = (e) => {
+  e.preventDefault();
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+
+  // Demo HR login (frontend-only)
+  if (email === "hr@demo.com" && password === "hr123") {
+    localStorage.setItem(
+      "hrData",
+      JSON.stringify({ hr_name: "Demo HR" })
+    );
+    alert("HR Login successful (Demo Mode)");
+    navigate("/hr");
+  } else {
+    alert("Invalid credentials (demo mode)");
+  }
+};
+
+
+
+
 
   return (
     <div className="hrauth-container">
